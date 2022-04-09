@@ -48,8 +48,9 @@
         <li>
             <a href="#usage">Usage</a>
             <ul>
-                <li><a href="#wireframes">Wireframes</a></li>
                 <li><a href="#user-stories">User Stories</a></li>
+                <li><a href="#design">Design</a></li>
+                <li><a href="#wireframes">Wireframes</a></li>
             </ul>
         </li>
         <li>
@@ -144,13 +145,8 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
 
-
 <!-- USAGE EXAMPLES -->
 ## Usage
-
-### Wireframes
-
-All wireframes are in a single file and can be found [here](#). <!-- TODO Add wireframe link -->
 
 ### User Stories
 <!-- TODO Add user stories -->
@@ -161,6 +157,29 @@ All wireframes are in a single file and can be found [here](#). <!-- TODO Add wi
 #### Returning Visitors
 
 * As a returning user, 
+  
+#### Frequent Visitors
+  
+* As a frequent user,  
+
+### Design
+
+#### Colour Scheme
+
+<!-- Add colour scheme and mainly used colours, potentially with explanation why those colours -->
+* The main colours used are 
+
+#### Typography
+
+<!-- Add list of fonts and explanation -->
+
+#### Imagery
+
+<!-- Explain imagery selection -->
+
+### Wireframes
+
+All wireframes are in a single file and can be found [here](#). <!-- TODO Add wireframe link -->
 
 
 <!-- ROADMAP -->
