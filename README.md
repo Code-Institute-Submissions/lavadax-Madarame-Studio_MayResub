@@ -26,7 +26,6 @@
 </p>
 
 
-
 <!-- TABLE OF CONTENTS -->
 <details open="open">
     <summary><strong>Table of Contents</strong></summary>
@@ -40,9 +39,7 @@
         <li>
             <a href="#deployment">Deployment</a>
             <ul>
-                <li><a href="#github-pages">Github Pages</a></li>
-                <li><a href="#forking-the-github-repository">Forking the GitHub Repository</a></li>
-                <li><a href="#making-a-local-clone">Making a Local Clone</a></li>
+                <li><a href="#heroku">Heroku</a></li>
             </ul>
         </li>
         <li>
@@ -51,6 +48,7 @@
                 <li><a href="#user-stories">User Stories</a></li>
                 <li><a href="#design">Design</a></li>
                 <li><a href="#wireframes">Wireframes</a></li>
+                <li><a href="#er-diagram">ER Diagram</a></li>
             </ul>
         </li>
         <li>
@@ -78,7 +76,6 @@
 </details>
 
 
-
 <!-- ABOUT THE PROJECT-->
 ## About The Project  
 
@@ -90,96 +87,67 @@ Below you can see a few screenshots of the finished project.
 
 <!-- TODO Add/remove software/pages used -->
 * [Gitpod](https://www.gitpod.io/) / [Gitpod Chrome extension](https://chrome.google.com/webstore/detail/gitpod-dev-environments-i/dodmmooeoklaejobgleioelladacbeki) - Used to develop the site and push the project to Github.
-* [GitHub](https://github.com) - Used to host the project during and after development.
-* [MockFlow](https://mockflow.com/) - Used to set up the wireframes at the start of the dev cycle.  
+* [GitHub](https://github.com) - Used for version control.
+* [Whimsical](https://whimsical.com/) - Used to set up the wireframes at the start of the dev cycle. 
 * [favicon.io](https://favicon.io/favicon-converter/) - Used to generate the favicon files.  
 
 
 <!-- DEPLOYMENT -->
 ## Deployment
 
-### GitHub Pages
+### Heroku
 
-The project was deployed to GitHub Pages using the following steps...
+The project was deployed to Heroku using the following steps...
 
-1. Log in to [GitHub](https://github.com/) and locate the GitHub Repository.
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-3. On the left hand side, click the "Pages" section.
-4. Under "Source", click the dropdown called "None" and select "Master Branch".
-5. Click "Save".
-6. The page will automatically refresh.
-7. Locate the now published site link in the Green box on the top part of the page.
-
-### Forking the GitHub Repository
-
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
-
-1. Log in to [GitHub](https://github.com/) and locate the GitHub Repository.
-2. At the top right of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-3. You should now have a copy of the original repository in your GitHub account.
-
-### Making a Local Clone
-
-1. Log in to [GitHub](https://github.com/) and locate the GitHub Repository.
-2. Under the repository name, click "Clone or download".
-3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-4. Open Git Bash
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type `git clone`, and then paste the URL you copied in Step 3.
-
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-```
-
-7. Press Enter. Your local clone will be created.
-
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
-```
-
-Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+1. Install the required dependencies in your repository, and save them in requirements.txt by typing "pip3 freeze --local > requirements.txt".
+2. Create a Procfile by typing "echo web: python app.py > Procfile" so Heroku knows what file to run.
+3. Log into heroku and create a new app.
+4. Give your app a unique name and select the applicaple region.
+5. Go to the "Deploy" tab, and select your preferred deployment method. For this project, I used automatic deployment from github.
+6. After selecting automatic deployment, enter the name of your github repository, select it from the menu when it is found, and click connect.
+7. Navigate to the "Settings" tab, click "Reveal Config Vars", and apply the same variables as in your env.py file, or your IDE environment variables.
+8. Now return to the "Deploy tab, scroll down, and enable automatic deployment.
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 ### User Stories
-<!-- TODO Add user stories -->
+
 #### First Time Visitors
 
-* As a new user, I want to 
+* As a new user, I want to easily understand the purpose of the site.
+* As a new user, I want to be able to easily navigate the site and access the content it provides.
+* As a new user, I want to easily find where to sign up for an account.
+* As a new user, I want to find product reviews.
 
 #### Returning Visitors
 
-* As a returning user, 
-  
-#### Frequent Visitors
-  
-* As a frequent user,  
+* As a returning user, I want to easily log into my account.
+* As a returning user, I want to be able to locate my order history and check the status of my pending orders.
+* As a returning user, I want to leave reviews for products that I purchased before.
 
 ### Design
 
 #### Colour Scheme
 
-<!-- Add colour scheme and mainly used colours, potentially with explanation why those colours -->
-* The main colours used are 
+* The main colours used are #f9b87b and #7bbcf9, pastel orange and pastel blue.  
+* Pastel orange is meant to illicit feelings of excitement, energy and confidence for the site visitor, while pastel blue is meant to show trust and competence.
 
 #### Typography
 
-<!-- Add list of fonts and explanation -->
-
-#### Imagery
-
-<!-- Explain imagery selection -->
+* For headers the main font will be Abril Fatface, with Rockwell and serif as fallbacks in case the font isn't being imported correctly for some reason.  
+* For regular text on the site, the main font will be Dosis, with Helvetica and sans-serif as fallbacks.  
+* Using serif fonts as headers makes it easier to read the serif fonts, as they'll be forced into uppercase which makes them easier to read, while also adding to the playfulness and creativity of the site.  
+* Using sans-serif on the rest of the page is to balance the playfulness with a cleaner feel as well as increasing the readability of the site.
 
 ### Wireframes
 
-All wireframes are in a single file and can be found [here](#). <!-- TODO Add wireframe link -->
+All wireframes are in a single file and can be found [here](https://github.com/lavadax/Madarame-Studio/blob/master/documentation/wireframes/wireframes.pdf).
+
+### ER Diagram
+
+The ER Diagram for the project describes the relationship between the used models and can be found [here](https://github.com/lavadax/Madarame-Studio/blob/master/documentation/er-diagrams/er-diagram.pdf)
 
 
 <!-- ROADMAP -->
@@ -187,22 +155,20 @@ All wireframes are in a single file and can be found [here](#). <!-- TODO Add wi
 
 <!-- TODO Add roadmap -->
 
-
 ### Future Plans
 
 <!-- TODO Add plans -->
 
 ### Open Issues
 <!-- TODO Add link -->
-See the [open issues](#) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/lavadax/Madarame-Studio/issues) for a list of proposed features (and known issues).
 
 ### Past Issues
 <!-- TODO Add link -->
-See the [closed issues](#) for a list of the past issues.
+See the [closed issues](https://github.com/lavadax/Madarame-Studio/issues?q=is%3Aissue+is%3Aclosed) for a list of the past issues.
 
 Notable past issues:  
 <!-- TODO Add major bugs encountered during dev process -->
-
 
 
 <!-- TESTING -->
@@ -239,12 +205,10 @@ Contributions are what make the open source community such an amazing place to l
 5. Open a Pull Request
 
 
-
 <!-- LICENSE -->
 ## License
 <!-- TODO Add link -->
-Distributed under the MIT License. See [`LICENSE`](#) for more information.
-
+Distributed under the MIT License. See [`LICENSE`](https://github.com/lavadax/Madarame-Studio/blob/master/LICENSE.txt) for more information.
 
 
 <!-- CONTACT -->
@@ -253,7 +217,6 @@ Distributed under the MIT License. See [`LICENSE`](#) for more information.
 Lavadax - [Twitter](https://twitter.com/LavadaxTwitch) - [facebook](https://www.facebook.com/kevin.schepers.5)
 <!-- TODO Add link -->
 Project Link: [#](#)
-
 
 
 <!-- ACKNOWLEDGEMENTS -->
