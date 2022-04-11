@@ -1,27 +1,28 @@
 <!-- PROJECT LOGO -->
 <br />
-<!-- TODO update href and src to GitHub & Logo link -->
+<!-- TODO update href and src to Heroku & Logo link -->
 <p align="center">
     <a href="#">
         <img src="#" alt="Logo" width="200" height="200">
     </a>
 </p>
 
-<!-- TODO add title, description & links -->
+<!-- TODO add links -->
 <p align="center">
-    <h2 align="center">PROJECT TITLE</h2>
+    <h2 align="center">MADARAME STUDIO</h2>
     <br />
     <p align="center">
-        This is a description
+        This is the 4th milestone project for code institute and is mostly focused on bringing together HTML, CSS, Javascript and Python through the use of the django framework.  
+        This project is meant to simulate an e-commerce shop focusing on art, enabling users to purchase art, sign up for an account, and complete purchases using Stripe.
         <br />
         <a href="#"><strong>Explore the docs »</strong></a>
         <br />
         <br />
         <a href="#">View Demo</a>
         ·
-        <a href="#">Report Bug</a>
+        <a href="https://github.com/lavadax/Madarame-Studio/issues">Report Bug</a>
         ·
-        <a href="#">Request Feature</a>
+        <a href="https://github.com/lavadax/Madarame-Studio/issues">Request Feature</a>
     </p>
 </p>
 
