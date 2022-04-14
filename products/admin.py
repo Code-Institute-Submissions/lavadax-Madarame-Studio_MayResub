@@ -11,6 +11,8 @@ class ProductAdmin(admin.ModelAdmin):
         "rating",
         "image",
         "artist",
+        "created",
+        "updated"
     )
 
     ordering = ("sku",)

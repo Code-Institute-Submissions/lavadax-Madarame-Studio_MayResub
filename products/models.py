@@ -14,6 +14,8 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True)
     artist = models.CharField(max_length=254, null=True, blank=True)
     artist_url = models.URLField(max_length=1024, null=True, blank=True)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.sku
