@@ -94,6 +94,15 @@ footer {
 .border-white {
     border: 1px solid white !important;
 }
+
+.img-container {
+    overflow: hidden;
+    height: 200px;
+}
+
+.center {
+    margin: auto;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
