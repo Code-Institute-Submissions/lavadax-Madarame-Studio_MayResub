@@ -14,7 +14,27 @@
         </div>
         <div class="row">
             <div class="product-container col-10 offset-1 bg-second">
-                <div class="row mt-1 mb-2"></div>
+                <div class="row mt-1 mb-2">
+                    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                        <div class="sort-select-wrapper w-50">
+                            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                <option value="reset" {% if sorting == "None_None" %}selected{% endif %}>Sort by...</option>
+                                <option value="price_asc" {% if sorting == "price_asc" %}selected{% endif %}>Price (low to high)</option>
+                                <option value="price_desc" {% if sorting == "price_desc" %}selected{% endif %}>Price (high to low)</option>
+                                <option value="rating_asc" {% if sorting == "rating_asc" %}selected{% endif %}>Rating (low to high)</option>
+                                <option value="rating_desc" {% if sorting == "rating_desc" %}selected{% endif %}>Rating (high to low)</option>
+                                <option value="artist_asc" {% if sorting == "artist_asc" %}selected{% endif %}>Artist (A-Z)</option>
+                                <option value="artist_desc" {% if sorting == "artist_desc" %}selected{% endif %}>Artist (Z-A)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 order-md-first">
+                        <p class="text-muted mt-3 text-center text-md-left">
+                            <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
+                            {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                        </p>
+                    </div>
+                </div>
                 <div class="row">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
@@ -64,4 +84,14 @@
             </div>
         </div>
     </div>
+    <div class="btt-button shadow-sm rounded-0 border border-black bg-main">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+        </a>	
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script src="{% static 'js/btt.js' %}" type="text/javascript"></script>
 {% endblock %}
