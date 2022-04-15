@@ -1,9 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block header %}
-{% endblock %}
-
 {% block content %}
     <h3 class="text-center header-font">Latest Additions</h3>
     <div class="container addition-container w-100 bg-second">
@@ -20,7 +17,7 @@
                         <div class="card-footer pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                    <p class="lead mb-0 text-left font-weight-bold">From ${{ product.base_price }}</p>
                                     {% if product.rating %}
                                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                                     {% else %}

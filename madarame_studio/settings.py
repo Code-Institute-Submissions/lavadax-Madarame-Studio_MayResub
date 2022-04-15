@@ -49,6 +49,8 @@ ACCOUNT_USERNAME_MIN_LENGTH = 3
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
+STANDARD_DELIVERY_PERCENTAGE = 10
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -66,6 +68,7 @@ INSTALLED_APPS = [
     # project apps
     'home',
     'products',
+    'basket',
 ]
 
 SITE_ID = 1
@@ -96,6 +99,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'basket.contexts.basket_contents',
             ],
         },
     },

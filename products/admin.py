@@ -7,7 +7,7 @@ from .models import Product
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         "sku",
-        "price",
+        "base_price",
         "rating",
         "image",
         "artist",

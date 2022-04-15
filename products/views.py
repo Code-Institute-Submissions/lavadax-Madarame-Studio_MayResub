@@ -22,6 +22,8 @@ def all_products(request):
         if "sort" in request.GET:
             sortkey = request.GET["sort"]
             sort = sortkey
+            if sortkey == "price":
+                sortkey = "base_price"
 
             if "direction" in request.GET:
                 direction = request.GET["direction"]
@@ -30,7 +32,7 @@ def all_products(request):
             products = products.order_by(sortkey)
 
         if "query" in request.GET:
-            query = request.GET['query']
+            query = request.GET["query"]
             if not query:
                 messages.error(
                     request, "You didn't enter any search criteria!")
