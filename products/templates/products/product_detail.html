@@ -14,7 +14,7 @@
         <div class="col-12 col-md-6 col-lg-4">
             <div class="product-details-container mb-5 mt-md-5">
                 <p class="mb-0">{{ product.artist }}</p>
-                <p class="lead mb-0 text-left font-weight-bold">${{ product.base_price }}</p>
+                <p class="lead mb-0 text-left fw-bold">${{ product.base_price }}</p>
                 {% if product.rating %}
                     <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                 {% else %}
@@ -63,13 +63,13 @@
                         </div>
 
                         <div class="col-12">
-                            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                            <a href="{% url 'products' %}" class="btn btn-main rounded-0 mt-5">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="text-uppercase">Continue Shopping</span>
                             </a>
-                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Basket">
+                            <input type="submit" class="btn btn-second rounded-0 text-uppercase mt-5" value="Add to Basket">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         <input type="hidden" id="base_price" name="base_price" value="{{ product.base_price }}">

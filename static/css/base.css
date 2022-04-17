@@ -45,17 +45,30 @@ footer {
     text-align: right;
 }
 
-.btn-outline-black {
-    background: white;
+.btn-main {
+    background: #7bbcf9;
     color: black !important;
-    border: 1px solid black;
+    border: 1px solid #f9b87b;
 }
 
-.btn-outline-black:hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
-    background: black;
-    color: white !important;
+.btn-main:hover,
+.btn-main:active,
+.btn-main:focus {
+    background: #f9b87b;
+    border: 1px solid #7bbcf9;
+}
+
+.btn-second {
+    background: #f9b87b;
+    color: black !important;
+    border: 1px solid #7bbcf9;
+}
+
+.btn-second:hover,
+.btn-second:active,
+.btn-second:focus {
+    background: #7bbcf9;
+    border: 1px solid #f9b87b;
 }
 
 /* from Bulma */

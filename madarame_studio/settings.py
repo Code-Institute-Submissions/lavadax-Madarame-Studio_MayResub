@@ -49,7 +49,12 @@ ACCOUNT_USERNAME_MIN_LENGTH = 3
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
+# Stripe settings
 STANDARD_DELIVERY_PERCENTAGE = 10
+STRIPE_CURRENCY = 'usd'
+STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
+STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -69,6 +74,11 @@ INSTALLED_APPS = [
     'home',
     'products',
     'basket',
+    'checkout',
+
+    # other dependencies
+    'crispy_forms',
+    'crispy_bootstrap5'
 ]
 
 SITE_ID = 1
@@ -84,6 +94,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'madarame_studio.urls'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 TEMPLATES = [
     {
@@ -101,6 +115,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'basket.contexts.basket_contents',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field'
+            ]
         },
     },
 ]
