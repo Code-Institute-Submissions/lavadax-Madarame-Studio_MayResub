@@ -36,3 +36,20 @@ class OrderForm(forms.ModelForm):
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs["class"] = "stripe-style-input"
             self.fields[field].label = False
+
+
+class CheckOrderForm(forms.Form):
+    order_number = forms.CharField(required=True)
+
+    def __init__(self, *args, **kwargs):
+        """
+        Add placeholders and classes, remove auto-generated
+        labels and set autofocus on first field
+        """
+        super().__init__(*args, **kwargs)
+
+        self.fields["order_number"].widget.attrs["autofocus"] = True
+        self.fields["order_number"].widget.attrs["placeholder"] = "Order Number *"
+        self.fields["order_number"].widget.attrs["class"] = "border-black \
+                                                        rounded-0"
+        self.fields["order_number"].label = False

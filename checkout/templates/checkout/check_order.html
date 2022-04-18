@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="header-font mb-4">Check Order Number</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <form class="login" method="POST" action="{% url 'check_order' %}">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <a class="btn btn-main rounded-0" href="{% url 'home' %}">Home</a>
+                <button class="primaryAction" type="submit">Check</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

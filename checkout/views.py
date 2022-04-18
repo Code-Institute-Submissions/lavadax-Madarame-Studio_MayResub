@@ -5,12 +5,44 @@ from django.shortcuts import (render, redirect, reverse,
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
+from django.db.models import Q
 from products.models import Product
 from basket.contexts import basket_contents
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
 from .models import Order, OrderLineItem
-from .forms import OrderForm
+from .forms import OrderForm, CheckOrderForm
+
+
+def check_order(request):
+
+    if request.method == "POST":
+        order_number = request.POST["order_number"]
+        try:
+            order = get_object_or_404(Order, order_number=order_number)
+            messages.info(request, (
+                f"This is a past confirmation for order number {order_number}."
+                " A confirmation email was sent on the order date."
+            ))
+            template = "checkout/checkout_success.html"
+            context = {
+                "order": order,
+                "anon": True,
+            }
+            return render(request, template, context)
+        except Exception as e:
+            messages.error(request, (
+                        "That order number is not in our database.\
+                Please check that the number matches the \
+                order number in your email."))
+            return redirect(reverse("check_order"))
+    else:
+        template = "checkout/check_order.html"
+        form = CheckOrderForm()
+        context = {
+            "form": form,
+        }
+        return render(request, template, context)
 
 
 @require_POST
