@@ -62,6 +62,9 @@
     {% block postloadjs %}
     <script type="text/javascript">
       $('.toast').show();
+      $(".close").click(function(e) {
+        $('.toast').hide();
+      });
     </script>
     {% endblock %}
   </body>
