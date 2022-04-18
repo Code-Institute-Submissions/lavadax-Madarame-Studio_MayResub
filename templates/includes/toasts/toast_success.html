@@ -19,7 +19,7 @@
                 {% for item in basket_items %}
                     <div class="row">
                         <div class="col-3 my-1">
-                            <img class="w-100" src="{{ item.product.image.url }}">
+                            <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.sku }}">
                         </div>
                         <div class="col-9">
                             <p class="my-0 small">Size: {{ item.size|upper }}</p>
