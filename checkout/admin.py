@@ -13,11 +13,11 @@ class OrderAdmin(admin.ModelAdmin):
                        "order_total", "grand_total", "original_basket",
                        "stripe_pid")
 
-    fields = ("order_number", "date", "full_name", "email", "phone_number",
-              "address_line_1", "address_line_2", "town_city",
-              "county_state", "zip_code", "country", "delivery_cost",
-              "order_total", "grand_total", "original_basket",
-              "stripe_pid")
+    fields = ("order_number", "user_profile", "date", "full_name",
+              "email", "phone_number", "address_line_1", "address_line_2",
+              "town_city", "county_state", "zip_code", "country",
+              "delivery_cost", "order_total", "grand_total",
+              "original_basket", "stripe_pid")
 
     list_display = ("order_number", "date", "full_name",
                     "order_total", "delivery_cost", "grand_total")

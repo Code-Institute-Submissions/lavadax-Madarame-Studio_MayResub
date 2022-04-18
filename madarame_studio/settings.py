@@ -57,6 +57,7 @@ STRIPE_CURRENCY = 'usd'
 STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
+DEFAULT_FROM_EMAIL = 'madaramestudio@example.com'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -77,6 +78,7 @@ INSTALLED_APPS = [
     'products',
     'basket',
     'checkout',
+    'profiles',
 
     # other dependencies
     'crispy_forms',
@@ -106,7 +108,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             BASE_DIR / 'templates',
-            BASE_DIR / 'templates', 'allauth',
+            BASE_DIR / 'templates/allauth',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
