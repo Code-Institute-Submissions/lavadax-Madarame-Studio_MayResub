@@ -4,12 +4,12 @@ from .models import Artist
 
 class ArtistAdmin(admin.ModelAdmin):
     list_display = (
-        "artist_name",
-        "artist_url",
+        "name",
+        "url",
         "created"
     )
 
-    ordering = ("artist_name",)
+    ordering = ("name",)
 
 
 admin.site.register(Artist, ArtistAdmin)
