@@ -1,4 +1,5 @@
 from django.db import models
+from artists.models import Artist
 
 # Create your models here.
 
@@ -12,8 +13,7 @@ class Product(models.Model):
     rating = models.DecimalField(max_digits=6, decimal_places=1, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
-    artist = models.CharField(max_length=254, null=True, blank=True)
-    artist_url = models.URLField(max_length=1024, null=True, blank=True)
+    artist = models.ForeignKey(Artist, on_delete=models.CASCADE, related_name="products")
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 

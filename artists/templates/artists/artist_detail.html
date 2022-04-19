@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="artist-details-container my-5">
+                <h3 class="mb-0 header-font">{{ artist.artist_name }}</h3>
+                <p class="mb-0">Member Since: {{ artist.created }}</p>
+            </div>
+            <a href="{% url 'products' %}" class="btn btn-main rounded-0 mt-5">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Continue Shopping</span>
+            </a>
+        </div>
+        
+        <div class="col-12 col-md-6 col-lg-4 bg-second my-3">
+            {% for product in products %}
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                        <div class="image-container my-3">
+                            <a href="{% url 'product_detail' product.id %}" class="img-container">
+                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.sku }}">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="product-details-container mb-5 mt-md-5">
+                            <p class="mb-0">{{ product.sku }}</p>
+                            <p class="lead mb-0 text-left fw-bold">From: ${{ product.base_price }}</p>
+                            {% if product.rating %}
+                                <small class="text-muted"><i class="fas fa-star me-1"></i>{{ product.rating }} / 5</small>
+                            {% else %}
+                                <small class="text-muted">No Rating</small>
+                            {% endif %}
+                            {% if request.user.is_superuser %}
+                                <small class="ms-3">
+                                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                </small>
+                            {% endif %}        
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script src="{% static 'js/quantity_input_script.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/price_calc.js' %}" type="text/javascript"></script>
+{% endblock %} 

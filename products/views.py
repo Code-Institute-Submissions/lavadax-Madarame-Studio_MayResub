@@ -5,6 +5,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
+from artists.models import Artist
 from .models import Product
 from .forms import ProductForm
 
@@ -59,9 +60,11 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    artist = product.artist
 
     context = {
         "product": product,
+        "artist": artist
     }
 
     return render(request, "products/product_detail.html", context)
