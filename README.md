@@ -1,13 +1,12 @@
 <!-- PROJECT LOGO -->
 <br />
-<!-- TODO update href and src to Heroku & Logo link -->
+<!-- TODO update href to Heroku -->
 <p align="center">
     <a href="#">
-        <img src="#" alt="Logo" width="200" height="200">
+        <img src="documentation/logo.png" alt="Logo" width="310" height="40">
     </a>
 </p>
 
-<!-- TODO add links -->
 <p align="center">
     <h2 align="center">MADARAME STUDIO</h2>
     <br />
@@ -15,10 +14,6 @@
         This is the 4th milestone project for code institute and is mostly focused on bringing together HTML, CSS, Javascript and Python through the use of the django framework.  
         This project is meant to simulate an e-commerce shop focusing on art, enabling users to purchase art, sign up for an account, and complete purchases using Stripe.
         <br />
-        <a href="#"><strong>Explore the docs »</strong></a>
-        <br />
-        <br />
-        <a href="#">View Demo</a>
         ·
         <a href="https://github.com/lavadax/Madarame-Studio/issues">Report Bug</a>
         ·
@@ -87,10 +82,20 @@ Below you can see a few screenshots of the finished project.
 ### Built With
 
 <!-- TODO Add/remove software/pages used -->
-* [Gitpod](https://www.gitpod.io/) / [Gitpod Chrome extension](https://chrome.google.com/webstore/detail/gitpod-dev-environments-i/dodmmooeoklaejobgleioelladacbeki) - Used to develop the site and push the project to Github.
+#### Languages
+* HTML5
+* CSS
+* Javascript
+* Python
+
+#### Databases
+* SQLite - local database used during development
+
+#### Frameworks & external sites
 * [GitHub](https://github.com) - Used for version control.
-* [Whimsical](https://whimsical.com/) - Used to set up the wireframes at the start of the dev cycle. 
-* [favicon.io](https://favicon.io/favicon-converter/) - Used to generate the favicon files.  
+* [Gitpod](https://www.gitpod.io/) / [Gitpod Chrome extension](https://chrome.google.com/webstore/detail/gitpod-dev-environments-i/dodmmooeoklaejobgleioelladacbeki) - Used to develop the site and push the project to Github.
+* [Whimsical](https://whimsical.com/) - Used to set up the wireframes at the start of the dev cycle.
+* [favicon.io](https://favicon.io/favicon-converter/) - Used to generate the favicon files.
 
 
 <!-- DEPLOYMENT -->
@@ -154,8 +159,6 @@ The ER Diagram for the project describes the relationship between the used model
 <!-- ROADMAP -->
 ## Roadmap
 
-<!-- TODO Add roadmap -->
-
 ### Future Plans
 
 <!-- TODO Add plans -->
@@ -169,8 +172,11 @@ See the [open issues](https://github.com/lavadax/Madarame-Studio/issues) for a l
 See the [closed issues](https://github.com/lavadax/Madarame-Studio/issues?q=is%3Aissue+is%3Aclosed) for a list of the past issues.
 
 Notable past issues:  
-<!-- TODO Add major bugs encountered during dev process -->
 
+* When creating fixtures, a typo in one of the artist models caused it to remain empty, raising an error from Django.  
+Unfortunately this typo went unnoticed for around an hour where no progress was being made on the project.
+* When creating the artist app and swapping the artist name and url fields from the product model,  
+mutliple site refreshes as old references kept being pointed out.
 
 <!-- TESTING -->
 ## Testing
@@ -208,7 +214,6 @@ Contributions are what make the open source community such an amazing place to l
 
 <!-- LICENSE -->
 ## License
-<!-- TODO Add link -->
 Distributed under the MIT License. See [`LICENSE`](https://github.com/lavadax/Madarame-Studio/blob/master/LICENSE.txt) for more information.
 
 
@@ -225,3 +230,7 @@ Project Link: [#](#)
 <!-- TODO Add acknowledgements -->
 * [github.com/othneildrew](https://github.com/othneildrew/Best-README-Template): for providing the readme template.
 * [github.com/Code-Institute-Solutions](https://github.com/Code-Institute-Solutions/SampleREADME): for filling in gaps in the readme template.
+* [github.com - boutique ado miniproject](https://github.com/Code-Institute-Solutions/boutique_ado_v1): for providing a solid base for this project.
+* [djangoproject.com](https://docs.djangoproject.com/en/3.2/): for providing documentation on the django framework.
+* [pixabay.com](https://pixabay.com): for providing all the images and artists featured on the page.
+* [github.com/nar3nd3r](https://github.com/nar3nd3r): for providing support as my project mentor.
