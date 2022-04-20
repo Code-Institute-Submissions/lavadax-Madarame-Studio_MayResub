@@ -28,7 +28,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row my-3">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black fw-bold">Order Number</p>
                         </div>
@@ -37,7 +37,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row my-3">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black fw-bold">Order Date</p>
                         </div>
@@ -46,14 +46,14 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row my-3">
                         <div class="col">
                             <small class="text-muted">Order Details:</small>
                         </div>
                     </div>
 
                     {% for item in order.lineitems.all %}
-                    <div class="row">
+                    <div class="row my-3">
                         <div class="col-12 col-md-4">
                             <p class="small mb-0 text-black fw-bold">
                                 {{ item.product.sku|upper }} - Size {{ item.product_size|upper }}
@@ -65,13 +65,13 @@
                     </div>
                     {% endfor %}
 
-                    <div class="row">
+                    <div class="row my-3">
                         <div class="col">
                             <small class="text-muted">Delivering To:</small>
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row my-3">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black fw-bold">Full Name</p>
                         </div>
@@ -80,7 +80,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row my-3">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black fw-bold">Address 1</p>
                         </div>
@@ -90,7 +90,7 @@
                     </div>
 
                     {% if order.address_line_2 %}
-                    <div class="row">
+                    <div class="row my-3">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black fw-bold">Address 2</p>
                         </div>
@@ -101,7 +101,7 @@
                     {% endif %}
 
                     {% if order.county_state %}
-                    <div class="row">
+                    <div class="row my-3">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black fw-bold">County/state</p>
                         </div>
@@ -111,7 +111,7 @@
                     </div>
                     {% endif %}
 
-                    <div class="row">
+                    <div class="row my-3">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black fw-bold">Town/City</p>
                         </div>
@@ -121,7 +121,7 @@
                     </div>
 
                     {% if order.zip_code %}
-                    <div class="row">
+                    <div class="row my-3">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black fw-bold">ZIP Code</p>
                         </div>
@@ -131,7 +131,7 @@
                     </div>
                     {% endif %}
 
-                    <div class="row">
+                    <div class="row my-3">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black fw-bold">Country</p>
                         </div>
@@ -140,7 +140,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row my-3">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black fw-bold">Phone Number</p>
                         </div>
@@ -149,36 +149,36 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row my-3">
                         <div class="col">
                             <small class="text-muted">Billing Info:</small>
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row my-3">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black fw-bold">Order Total</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-end">
-                            <p class="mb-0">{{ order.order_total }}</p>
+                            <p class="mb-0">${{ order.order_total }}</p>
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row my-3">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black fw-bold">Delivery</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-end">
-                            <p class="mb-0">{{ order.delivery_cost }}</p>
+                            <p class="mb-0">${{ order.delivery_cost }}</p>
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row my-3">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black fw-bold">Grand Total</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-end">
-                            <p class="mb-0">{{ order.grand_total }}</p>
+                            <p class="mb-0">${{ order.grand_total }}</p>
                         </div>
                     </div>
                 </div>

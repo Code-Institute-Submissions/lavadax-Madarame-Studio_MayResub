@@ -218,12 +218,13 @@ input[name='query']::placeholder {
 
 /* Product Form */
 
-form .form-control,
-form .form-group {
+#payment-form .form-control,
+#payment-form .form-group,
+#payment-form .form-select {
     width: 100%!important;
 }
 
-form .input-group .form-control {
+#payment-form .input-group .form-control {
     width: 60%!important;
 }
 
@@ -280,8 +281,9 @@ form .input-group .form-control {
         right: 105px;
     }
 
-    form .form-control,
-    form .form-group {
+    #payment-form .form-control,
+    #payment-form .form-group,
+    #payment-form .form-select {
         width: 50%!important;
     }
 }
