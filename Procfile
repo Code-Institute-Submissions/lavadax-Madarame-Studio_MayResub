@@ -1,0 +1,1 @@
+web: gunicorn madarame_studio.wsgi:application

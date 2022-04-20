@@ -1,15 +1,15 @@
 $('.btt-link').click(function(e) {
-    window.scrollTo(0,0)
-})
+    window.scrollTo(0,0);
+});
 
 $('#sort-selector').change(function() {
-    var selector = $(this);
-    var currentUrl = new URL(window.location);
+    let selector = $(this);
+    let currentUrl = new URL(window.location);
 
-    var selectedVal = selector.val();
+    let selectedVal = selector.val();
     if(selectedVal != "reset"){
-        var sort = selectedVal.split("_")[0];
-        var direction = selectedVal.split("_")[1];
+        let sort = selectedVal.split("_")[0];
+        let direction = selectedVal.split("_")[1];
 
         currentUrl.searchParams.set("sort", sort);
         currentUrl.searchParams.set("direction", direction);
@@ -21,4 +21,4 @@ $('#sort-selector').change(function() {
 
         window.location.replace(currentUrl);
     }
-})
+});

@@ -4,7 +4,6 @@ html {
 
 body {
     font-family:  "Dosis", "Helvetica", "sans-serif";
-    height: calc(100vh - 120px);
 }
 
 .header-font {
@@ -18,6 +17,10 @@ body {
 
 .bg-second {
     background-color: #7bbcf9;
+}
+
+.text-second-dark {
+    color: #49a3f7;
 }
 
 .main-content {
@@ -39,6 +42,45 @@ footer {
     right:0.5%;
     font-size: 1.5em;
     text-align: right;
+}
+
+.btn-main {
+    background: #7bbcf9;
+    color: black !important;
+    border: 1px solid #f9b87b;
+}
+
+.btn-main:hover,
+.btn-main:active,
+.btn-main:focus {
+    background: #f9b87b;
+    border: 1px solid #7bbcf9;
+}
+
+.btn-second {
+    background: #f9b87b;
+    color: black !important;
+    border: 1px solid #7bbcf9;
+}
+
+.btn-second:hover,
+.btn-second:active,
+.btn-second:focus {
+    background: #7bbcf9;
+    border: 1px solid #f9b87b;
+}
+
+.card {
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+a.card {
+    color:#000;
+    text-decoration: none;
 }
 
 /* from Bulma */
@@ -87,8 +129,118 @@ footer {
     right: 10px;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
+}
+
+input[name='query']::placeholder {
+    color: #aab7c4;
+}
+
+/* ------------------------------- bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+.basket-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+    color: #6c757d; /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: 400;
+    color: black !important;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #f9b87b;
+    border: 1px solid #7bbcf9;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+    background-color: #7bbcf9;
+    border-color: #f9b87b;
+}
+
+.allauth-form-inner-content a {
+	color: #17a2b8; /* text-info */
+}
+
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
 }
 
 /* -------------------------------- Media Queries */
@@ -112,5 +264,48 @@ footer {
 
     .header-container {
         padding-top: 120px;
+    }
+}
+
+@media (max-width: 991px) {
+    .main-content {
+        min-height: calc(100vh - 85px - 50px);
+        margin-top: 85px;
+    }
+
+    .display-4.logo-font.text-black {
+        font-size: 2rem;
+    }
+
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+    #delivery-banner h4 {
+        font-size: .9rem;
+    }
+
+    .btn.btn-main.rounded-0,
+    .btn.btn-second.rounded-0 {
+        padding: .375rem .375rem;
+    }
+
+    .btn.btn-main.rounded-0.btn-lg,
+    .btn.btn-second.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: .5rem .5rem !important;
     }
 }
