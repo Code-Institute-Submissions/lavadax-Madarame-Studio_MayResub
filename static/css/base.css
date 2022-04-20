@@ -4,7 +4,6 @@ html {
 
 body {
     font-family:  "Dosis", "Helvetica", "sans-serif";
-    height: calc(100vh - 120px);
 }
 
 .header-font {
@@ -269,6 +268,11 @@ input[name='query']::placeholder {
 }
 
 @media (max-width: 991px) {
+    .main-content {
+        min-height: calc(100vh - 85px - 50px);
+        margin-top: 85px;
+    }
+
     .display-4.logo-font.text-black {
         font-size: 2rem;
     }
