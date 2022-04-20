@@ -1,3 +1,6 @@
+"""
+Checkout page views for the madarame_studio project
+"""
 import json
 import stripe
 from django.shortcuts import (render, redirect, reverse,
@@ -14,7 +17,9 @@ from .forms import OrderForm, CheckOrderForm
 
 
 def check_order(request):
-
+    """
+    A view for anonymous users to check order confirmations
+    """
     if request.method == "POST":
         order_number = request.POST["order_number"]
         try:
@@ -46,6 +51,9 @@ def check_order(request):
 
 @require_POST
 def cache_checkout_data(request):
+    """
+    Send payment intent to Stripe or inform user of error
+    """
     try:
         pid = request.POST.get("client_secret").split("_secret")[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -62,6 +70,9 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    """
+    Create new order from basket on POST, or show order summary on GET
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 

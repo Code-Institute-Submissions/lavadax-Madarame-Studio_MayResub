@@ -1,3 +1,6 @@
+"""
+Artist models used in database and admin
+"""
 from django.db import models
 
 

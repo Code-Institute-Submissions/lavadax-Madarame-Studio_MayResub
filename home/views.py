@@ -4,12 +4,11 @@ Home page views for the madarame_studio project
 from django.shortcuts import render
 from products.models import Product
 
-# Create your views here.
-
 
 def index(request):
-    """ A view to return the homepage """
-
+    """
+    A view to return the homepage
+    """
     products = Product.objects.all()
     query = None
     sort = "created"

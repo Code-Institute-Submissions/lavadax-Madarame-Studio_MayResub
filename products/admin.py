@@ -1,10 +1,14 @@
+"""
+Admin settings for Product objects for the madarame_studio project
+"""
 from django.contrib import admin
 from .models import Product
 
-# Register your models here.
-
 
 class ProductAdmin(admin.ModelAdmin):
+    """
+    Admin settings for Product objects for the madarame_studio project
+    """
     list_display = (
         "sku",
         "base_price",

@@ -1,3 +1,6 @@
+"""
+profile urls for the madarame_studio project
+"""
 from django.urls import path
 from . import views
 

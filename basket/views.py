@@ -1,3 +1,6 @@
+"""
+Basket page views for the madarame_studio project
+"""
 from django.shortcuts import (render, redirect,
                               HttpResponse, get_object_or_404)
 from django.contrib import messages
@@ -43,8 +46,9 @@ def add_to_basket(request, item_id):
 
 
 def adjust_basket(request, item_id):
-    """Adjust the quantity of the specified product to the specified amount"""
-
+    """
+    Adjust the quantity of the specified product to the specified amount
+    """
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get("quantity"))
     size = None
@@ -82,8 +86,9 @@ def adjust_basket(request, item_id):
 
 
 def remove_from_basket(request, item_id):
-    """Remove the item from the shopping basket"""
-
+    """
+    Remove the item from the shopping basket
+    """
     try:
         product = get_object_or_404(Product, pk=item_id)
         size = None
@@ -105,6 +110,6 @@ def remove_from_basket(request, item_id):
         request.session["basket"] = basket
         return HttpResponse(status=200)
 
-    except Exception as e:
-        messages.error(request, f'Error removing item: {e}')
+    except Exception as error:
+        messages.error(request, f'Error removing item: {error}')
         return HttpResponse(status=500)

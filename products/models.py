@@ -1,7 +1,8 @@
+"""
+Product models used in database and admin
+"""
 from django.db import models
 from artists.models import Artist
-
-# Create your models here.
 
 
 class Product(models.Model):

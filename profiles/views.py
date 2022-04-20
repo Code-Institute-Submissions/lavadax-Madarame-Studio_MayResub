@@ -1,3 +1,6 @@
+"""
+Profile views for madarame_studio project
+"""
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -8,8 +11,9 @@ from .forms import UserProfileForm
 
 @login_required
 def profile(request):
-    """ Display the user's profile. """
-
+    """
+    Display the user's profile
+    """
     profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == "POST":
@@ -35,6 +39,9 @@ def profile(request):
 
 
 def order_history(request, order_number):
+    """
+    Display past order
+    """
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (

@@ -1,3 +1,6 @@
+"""
+Order models used in database and admin
+"""
 import uuid
 from django.db import models
 from django.db.models import Sum
@@ -8,6 +11,9 @@ from profiles.models import UserProfile
 
 
 class Order(models.Model):
+    """
+    A class to contain all orders
+    """
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
                                      null=True, blank=True,
@@ -64,6 +70,10 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
+    """
+    A class to contain all line items,
+    linking back to the relevant order and product
+    """
     order = models.ForeignKey(Order, null=False, blank=False,
                               on_delete=models.CASCADE,
                               related_name="lineitems")

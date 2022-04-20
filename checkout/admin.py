@@ -1,13 +1,22 @@
+"""
+Admin settings for Order objects for the madarame_studio project
+"""
 from django.contrib import admin
 from .models import Order, OrderLineItem
 
 
 class OrderLineItemAdminInline(admin.TabularInline):
+    """
+    Specify display settings in admin view for OrderLineItem model
+    """
     model = OrderLineItem
     readonly_fields = ("lineitem_total",)
 
 
 class OrderAdmin(admin.ModelAdmin):
+    """
+    Specify display settings in admin view for Order model
+    """
     inlines = (OrderLineItemAdminInline,)
     readonly_fields = ("order_number", "date", "delivery_cost",
                        "order_total", "grand_total", "original_basket",
