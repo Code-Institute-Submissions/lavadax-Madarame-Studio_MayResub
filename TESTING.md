@@ -64,7 +64,44 @@
     + Unfortunately the site does not support leaving reviews currently, however this is on of the future plans.
 
 ## Functional Testing
-<!-- TODO Add functional testing -->
+
+* Tested that all links in the header work correctly.
+* Tested the search bar to make sure it filters products accurately.
+* Tested logo to get redirected to the home page.
+* Added items to card to test toast messages and basket cost number.
+
+* Tested both footer links linking to the correct pages.
+
+* Tested the product cards on the home page correctly redirecting to product details.
+* Tested the "see more" button to correctly send to the products page.
+
+* Tested the product card on the product page to correctly redirect to product details.
+* Tested Products home button to correctly redirect to products page without filters.
+* Tested the sorting options.
+
+* Tested account registration functionality.
+* During account registration, tested email confirmations.
+* Tested login functionality.
+
+* Tested login link on registration page.
+* Tested registration link on login page.
+* Tested "forgot password" button on login page.
+* Tested password reset functionality.
+* Tested logout functionality.
+
+* Tested checkout functionality with invalid and missing details.
+* Tested checkout functionality with correct details.
+* Tested order history on an account that made an order.
+* Tested order number lookup after being logged out.
+
 
 ## Accessibility Testing
-<!-- TODO Add accessibility testing -->
+
+I first tested the site using various screen sizes available in the browser dev tools to ensure responsive design.
+
+And I tested the site on the following list of browsers:  
+[Opera](https://www.opera.com)  
+[Opera GX](https://www.opera.com/gx)  
+[Google Chrome](https://www.google.com/chrome)  
+[Microsoft Edge](www.microsoft.com/edge)  
+[Brave](https://brave.com)  

@@ -68,7 +68,23 @@
 
 Below you can see a few screenshots of the finished project.  
   
-<!-- TODO Add screenshots of the live site -->
+Home Page:  
+![Home Page](https://github.com/lavadax/Madarame-Studio/blob/main/documentation/showcase/home.png)  
+  
+Product List:  
+![Product List](https://github.com/lavadax/Madarame-Studio/blob/main/documentation/showcase/products.png)  
+  
+Product Detail:  
+![Product Details](https://github.com/lavadax/Madarame-Studio/blob/main/documentation/showcase/Product_detail.png)  
+  
+Login:  
+![Login](https://github.com/lavadax/Madarame-Studio/blob/main/documentation/showcase/login.png)  
+  
+Profile:  
+![Profile](https://github.com/lavadax/Madarame-Studio/blob/main/documentation/showcase/profile.png)  
+  
+Order History:  
+![Order History](https://github.com/lavadax/Madarame-Studio/blob/main/documentation/showcase/order_history.png)  
 
 ### Built With
 
@@ -206,7 +222,6 @@ Distributed under the MIT License. See [`LICENSE`](https://github.com/lavadax/Ma
 ## Contact
 
 Lavadax - [Twitter](https://twitter.com/LavadaxTwitch) - [facebook](https://www.facebook.com/kevin.schepers.5)
-<!-- TODO Add link -->
 Project Link: [Madarame Studio](https://lavadax-madarame-studio.herokuapp.com)
 
 
