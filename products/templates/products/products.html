@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="product-container col-10 offset-1 bg-second mb-2">
+            <div class="product-container col-10 offset-1 mb-2">
                 <div class="row mt-1 mb-2">
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-50">
@@ -35,10 +35,10 @@
                 <div class="row">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
-                            <div class="card h-100 border-0">
-                                <a href="{% url 'product_detail' product.id %}" class="img-container">
+                            <a href="{% url 'product_detail' product.id %}" class="card h-100 border-0 shadow-lg">
+                                <div class="img-container">
                                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.sku }}">
-                                </a>
+                                </div>
                                 <div class="card-body pb-0">
                                     <p class="mb-0">{{ product.sku }} by {{ product.artist.name }}</p>
                                 </div>
@@ -60,7 +60,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         {% if forloop.counter|divisibleby:1 %}
                             <div class="col-12 d-sm-none mb-3">

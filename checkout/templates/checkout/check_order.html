@@ -15,8 +15,8 @@
             <form class="login" method="POST" action="{% url 'check_order' %}">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <a class="btn btn-main rounded-0" href="{% url 'home' %}">Home</a>
-                <button class="primaryAction" type="submit">Check</button>
+                <a class="btn btn-second rounded-0" href="{% url 'home' %}">Home</a>
+                <button class="primaryAction btn btn-main rounded-0" type="submit">Check</button>
             </form>
         </div>
     </div>

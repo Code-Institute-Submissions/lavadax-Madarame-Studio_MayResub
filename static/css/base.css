@@ -71,6 +71,19 @@ footer {
     border: 1px solid #f9b87b;
 }
 
+.card {
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+a.card {
+    color:#000;
+    text-decoration: none;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -205,6 +218,15 @@ input[name='query']::placeholder {
 
 /* Product Form */
 
+form .form-control,
+form .form-group {
+    width: 100%!important;
+}
+
+form .input-group .form-control {
+    width: 60%!important;
+}
+
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -256,5 +278,10 @@ input[name='query']::placeholder {
 
     .arrow-up {
         right: 105px;
+    }
+
+    form .form-control,
+    form .form-group {
+        width: 50%!important;
     }
 }

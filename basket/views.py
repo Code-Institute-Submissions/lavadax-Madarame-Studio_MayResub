@@ -1,4 +1,4 @@
-from django.shortcuts import (render, redirect, reverse,
+from django.shortcuts import (render, redirect,
                               HttpResponse, get_object_or_404)
 from django.contrib import messages
 from products.models import Product
@@ -74,7 +74,11 @@ def adjust_basket(request, item_id):
             messages.success(request, f'Removed {product.sku} from your bag')
 
     request.session["basket"] = basket
-    return redirect(reverse("view_basket"))
+    template = "basket/basket.html"
+    context = {
+        "on_basket": True
+    }
+    return render(request, template, context)
 
 
 def remove_from_basket(request, item_id):
@@ -103,4 +107,4 @@ def remove_from_basket(request, item_id):
 
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
-        return HttpResponse(status=500) 
+        return HttpResponse(status=500)

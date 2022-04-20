@@ -10,4 +10,4 @@ class Artist(models.Model):
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.artist_name
+        return self.name

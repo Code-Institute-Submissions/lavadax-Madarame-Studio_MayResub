@@ -4,15 +4,15 @@
 {% block content %}
     <h3 class="text-center header-font">Latest Additions</h3>
     <hr class="w-50 mb-1 center">
-    <div class="container addition-container w-100 bg-second">
+    <div class="container addition-container w-100">
         <div class="row mt-1 mb-3"></div>
-        <div class="row h-100 w-100">
+        <div class="row h-100 w-100 mx-auto">
             {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
-                    <div class="card h-100 border-0">
-                        <a href="{% url 'product_detail' product.id %}" class="img-container">
+                    <a href="{% url 'product_detail' product.id %}" class="card h-100 border-0 shadow-lg">
+                        <div class="img-container">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.sku }}">
-                        </a>
+                        </div>
                         <div class="card-body pb-0">
                             <p class="mb-0">{{ product.sku }} by {{ product.artist.name }}</p>
                         </div>
@@ -28,7 +28,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 {% if forloop.counter|divisibleby:1 %}
                     <div class="col-12 d-sm-none mb-3">
@@ -54,7 +54,7 @@
         </div>
     </div>
     <div class="row w-100">
-        <a href="{% url 'products' %}" class="btn bg-second center btn-width mt-2">See More</a>
+        <a href="{% url 'products' %}" class="btn btn-main rounded-0 center btn-width mt-2">See More</a>
     </div>
     
 {% endblock %}
