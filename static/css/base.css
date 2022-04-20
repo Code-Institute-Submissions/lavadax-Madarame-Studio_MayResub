@@ -218,16 +218,6 @@ input[name='query']::placeholder {
 
 /* Product Form */
 
-#payment-form .form-control,
-#payment-form .form-group,
-#payment-form .form-select {
-    width: 100%!important;
-}
-
-#payment-form .input-group .form-control {
-    width: 60%!important;
-}
-
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -276,14 +266,42 @@ input[name='query']::placeholder {
     .header-container {
         padding-top: 120px;
     }
+}
 
-    .arrow-up {
-        right: 105px;
+@media (max-width: 991px) {
+    .display-4.logo-font.text-black {
+        font-size: 2rem;
     }
 
-    #payment-form .form-control,
-    #payment-form .form-group,
-    #payment-form .form-select {
-        width: 50%!important;
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+    #delivery-banner h4 {
+        font-size: .9rem;
+    }
+
+    .btn.btn-main.rounded-0,
+    .btn.btn-second.rounded-0 {
+        padding: .375rem .375rem;
+    }
+
+    .btn.btn-main.rounded-0.btn-lg,
+    .btn.btn-second.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: .5rem .5rem !important;
     }
 }
