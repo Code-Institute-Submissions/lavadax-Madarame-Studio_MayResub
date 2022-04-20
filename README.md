@@ -1,8 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
-<!-- TODO update href to Heroku -->
 <p align="center">
-    <a href="#">
+    <a href="https://lavadax-madarame-studio.herokuapp.com">
         <img src="documentation/logo.png" alt="Logo" width="310" height="40">
     </a>
 </p>
@@ -55,15 +54,7 @@
                 <li><a href="#past-issues">Past issues</a></li>
             </ul>
         </li>
-        <li>
-            <a href="#testing">Testing</a>
-            <ul>
-                <li><a href="#validation">Validation</a></li>
-                <li><a href="#testing-user-stories">Testing User Stories</a></li>
-                <li><a href="#functional-testing">Functional Testing</a></li>
-                <li><a href="#accessibility-testing">Accessibility Testing</a></li>
-            </ul>
-        </li>
+        <li><a href="#testing">Testing</a></li>
         <li><a href="#contributing">Contributing</a></li>
         <li><a href="#license">License</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -81,7 +72,6 @@ Below you can see a few screenshots of the finished project.
 
 ### Built With
 
-<!-- TODO Add/remove software/pages used -->
 #### Languages
 * HTML5
 * CSS
@@ -89,13 +79,21 @@ Below you can see a few screenshots of the finished project.
 * Python
 
 #### Databases
-* SQLite - local database used during development
+* SQLite - local database used during development.
+* Postgres - database used post-deployment.
+* AWS S3 - Database used to host static files and product images.
 
 #### Frameworks & external sites
 * [GitHub](https://github.com) - Used for version control.
 * [Gitpod](https://www.gitpod.io/) / [Gitpod Chrome extension](https://chrome.google.com/webstore/detail/gitpod-dev-environments-i/dodmmooeoklaejobgleioelladacbeki) - Used to develop the site and push the project to Github.
 * [Whimsical](https://whimsical.com/) - Used to set up the wireframes at the start of the dev cycle.
 * [favicon.io](https://favicon.io/favicon-converter/) - Used to generate the favicon files.
+* [fontawesome](https://fontawesome.com) - Used to add icons across the site.
+* [bootstrap](https://getbootstrap.com) - Used to simplify styling.
+* [W3 HTML validator](https://validator.w3.org/nu/) - Used to validate HTML code.
+* [W3 CSS validator](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code.
+* [JSHint](https://jshint.com) - Used to validate JS code.
+* [pycodestyle](https://pypi.org/project/pycodestyle/) - Used to validate python code.
 
 
 <!-- DEPLOYMENT -->
@@ -149,11 +147,11 @@ The project was deployed to Heroku using the following steps...
 
 ### Wireframes
 
-All wireframes are in a single file and can be found [here](https://github.com/lavadax/Madarame-Studio/blob/master/documentation/wireframes/wireframes.pdf).
+All wireframes are in a single file and can be found [here](https://github.com/lavadax/Madarame-Studio/blob/main/documentation/wireframes/wireframes.pdf).
 
 ### ER Diagram
 
-The ER Diagram for the project describes the relationship between the used models and can be found [here](https://github.com/lavadax/Madarame-Studio/blob/master/documentation/er-diagrams/er-diagram.pdf)
+The ER Diagram for the project describes the relationship between the used models and can be found [here](https://github.com/lavadax/Madarame-Studio/blob/main/documentation/er-diagrams/er-diagram.pdf)
 
 
 <!-- ROADMAP -->
@@ -161,14 +159,16 @@ The ER Diagram for the project describes the relationship between the used model
 
 ### Future Plans
 
-<!-- TODO Add plans -->
+* Allow users to leave reviews on products which will dynamically affect the product ratings.
+* Allow users to sign up as an artist.
+* Allow artists to upload art and sell it on the page after being reviewed by the site owners.
 
 ### Open Issues
-<!-- TODO Add link -->
+
 See the [open issues](https://github.com/lavadax/Madarame-Studio/issues) for a list of proposed features (and known issues).
 
 ### Past Issues
-<!-- TODO Add link -->
+
 See the [closed issues](https://github.com/lavadax/Madarame-Studio/issues?q=is%3Aissue+is%3Aclosed) for a list of the past issues.
 
 Notable past issues:  
@@ -178,26 +178,11 @@ Unfortunately this typo went unnoticed for around an hour where no progress was 
 * When creating the artist app and swapping the artist name and url fields from the product model,  
 mutliple site refreshes as old references kept being pointed out.
 
+
 <!-- TESTING -->
 ## Testing
 
-### Validation
-<!-- TODO Add code validation -->
-
-
-### Testing User Stories
-<!-- TODO Add user stories testing -->
-#### First Time Visitor goals  
-  
-
-#### Returning Visitor Goals
-
-
-### Functional Testing
-<!-- TODO Add functional testing -->
-
-### Accessibility Testing
-<!-- TODO Add accessibility testing -->
+Testing information can be found in it's own [TESTING.md](https://github.com/lavadax/Madarame-Studio/blob/main/TESTING.md) file.
 
 
 <!-- CONTRIBUTING -->
@@ -214,7 +199,7 @@ Contributions are what make the open source community such an amazing place to l
 
 <!-- LICENSE -->
 ## License
-Distributed under the MIT License. See [`LICENSE`](https://github.com/lavadax/Madarame-Studio/blob/master/LICENSE.txt) for more information.
+Distributed under the MIT License. See [`LICENSE`](https://github.com/lavadax/Madarame-Studio/blob/main/LICENSE.txt) for more information.
 
 
 <!-- CONTACT -->
@@ -222,12 +207,12 @@ Distributed under the MIT License. See [`LICENSE`](https://github.com/lavadax/Ma
 
 Lavadax - [Twitter](https://twitter.com/LavadaxTwitch) - [facebook](https://www.facebook.com/kevin.schepers.5)
 <!-- TODO Add link -->
-Project Link: [#](#)
+Project Link: [Madarame Studio](https://lavadax-madarame-studio.herokuapp.com)
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-<!-- TODO Add acknowledgements -->
+
 * [github.com/othneildrew](https://github.com/othneildrew/Best-README-Template): for providing the readme template.
 * [github.com/Code-Institute-Solutions](https://github.com/Code-Institute-Solutions/SampleREADME): for filling in gaps in the readme template.
 * [github.com - boutique ado miniproject](https://github.com/Code-Institute-Solutions/boutique_ado_v1): for providing a solid base for this project.
