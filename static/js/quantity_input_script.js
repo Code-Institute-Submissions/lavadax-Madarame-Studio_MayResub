@@ -4,10 +4,11 @@
 * which prevents any errors 
 */
 function handleEnableDisable(itemId, size) {
+    let currentValue;
     if (size) {
-        var currentValue = parseInt($(`.size_${itemId}_${size}`).val());
+        currentValue = parseInt($(`.size_${itemId}_${size}`).val());
     } else {
-        var currentValue = parseInt($(`.id_qty_${itemId}`).val());
+        currentValue = parseInt($(`.id_qty_${itemId}`).val());
     }
     let minusDisabled = currentValue < 2;
     let plusDisabled = currentValue > 98;
@@ -24,27 +25,28 @@ function handleEnableDisable(itemId, size) {
 let allQtyInputs = $('.qty_input');
 for(let i = 0; i < allQtyInputs.length; i++){
     let itemId = $(allQtyInputs[i]).data('item_id');
-    var size = $(allQtyInputs[i]).data('size');
+    let size = $(allQtyInputs[i]).data('size');
     handleEnableDisable(itemId, size);
 }
 
 // Check enable/disable every time the input is changed
 $('.qty_input').change(function() {
     let itemId = $(this).data('item_id');
-    var size = $(this).data('size');
+    let size = $(this).data('size');
     handleEnableDisable(itemId, size);
 });
 
 // Increment quantity
 $('.increment-qty').click(function(e) {
     e.preventDefault();
-    var itemId = $(this).data('item_id');
-    var size = $(this).data('size');
+    let itemId = $(this).data('item_id');
+    let size = $(this).data('size');
     let closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+    let allQuantityInputs;
     if (size) {
-        var allQuantityInputs = $(`.input-group-${itemId} input[data-size='${size}']`);
+        allQuantityInputs = $(`.input-group-${itemId} input[data-size='${size}']`);
     } else {
-        var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
+        allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
     }
     let currentValue = parseInt($(closestInput).val());
     $(allQuantityInputs).val(currentValue + 1);
@@ -54,13 +56,14 @@ $('.increment-qty').click(function(e) {
 // Decrement quantity
 $('.decrement-qty').click(function(e) {
     e.preventDefault();
-    var itemId = $(this).data('item_id');
-    var size = $(this).data('size');
+    let itemId = $(this).data('item_id');
+    let size = $(this).data('size');
     let closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+    let allQuantityInputs;
     if (size) {
-        var allQuantityInputs = $(`.input-group-${itemId} input[data-size='${size}']`);
+        allQuantityInputs = $(`.input-group-${itemId} input[data-size='${size}']`);
     } else {
-        var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
+        allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
     }
     let currentValue = parseInt($(closestInput).val());
     $(allQuantityInputs).val(currentValue - 1);
