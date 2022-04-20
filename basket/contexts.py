@@ -1,4 +1,3 @@
-from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
@@ -32,7 +31,8 @@ def basket_contents(request):
         else:
             product = get_object_or_404(Product, pk=item_id)
             for size, quantity in item_data["items_by_size"].items():
-                total += quantity * (round(1.1 ** size_multi[size] * float(product.base_price)) - 0.01)
+                total += quantity * (round(1.1 ** size_multi[size] * float(
+                        product.base_price)) - 0.01)
                 product_count += quantity
                 basket_items.append({
                     "item_id": item_id,

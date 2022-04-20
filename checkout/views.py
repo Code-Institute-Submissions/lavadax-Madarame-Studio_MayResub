@@ -5,7 +5,6 @@ from django.shortcuts import (render, redirect, reverse,
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
-from django.db.models import Q
 from products.models import Product
 from basket.contexts import basket_contents
 from profiles.forms import UserProfileForm
@@ -30,7 +29,7 @@ def check_order(request):
                 "anon": True,
             }
             return render(request, template, context)
-        except Exception as e:
+        except Exception:
             messages.error(request, (
                         "That order number is not in our database.\
                 Please check that the number matches the \
@@ -56,10 +55,10 @@ def cache_checkout_data(request):
             "username": request.user,
         })
         return HttpResponse(status=200)
-    except Exception as e:
+    except Exception as error:
         messages.error(request, "Sorry, your payment cannot be \
             processed right now. Please try again later.")
-        return HttpResponse(content=e, status=400)
+        return HttpResponse(content=error, status=400)
 
 
 def checkout(request):

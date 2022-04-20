@@ -49,7 +49,8 @@ class CheckOrderForm(forms.Form):
         super().__init__(*args, **kwargs)
 
         self.fields["order_number"].widget.attrs["autofocus"] = True
-        self.fields["order_number"].widget.attrs["placeholder"] = "Order Number *"
+        self.fields["order_number"].widget.attrs[
+                "placeholder"] = "Order Number *"
         self.fields["order_number"].widget.attrs["class"] = "border-black \
                                                         rounded-0"
         self.fields["order_number"].label = False
