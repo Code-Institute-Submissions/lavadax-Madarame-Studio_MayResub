@@ -18,6 +18,8 @@ $(".remove-item").click(function(e) {
         });
 });
 
+
+// function from https://www.w3schools.com/js/js_cookies.asp
 function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
